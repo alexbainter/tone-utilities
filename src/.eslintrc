@@ -1,0 +1,15 @@
+{
+  "extends": "@alexbainter/eslint-config/browser",
+  "parserOptions": {
+     "ecmaVersion": "2020"
+  },
+  "overrides": [{
+    "files": "*.spec.js",
+    "env": {
+      "mocha": true,
+    },
+    "globals": {
+      "expect": "readonly"
+    }
+  }]
+}
