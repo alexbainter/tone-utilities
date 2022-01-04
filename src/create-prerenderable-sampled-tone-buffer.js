@@ -1,8 +1,8 @@
 import sampleNote from './sample-note';
-import createBuffer from './create-buffer';
-import renderBuffer from './render-buffer';
+import createToneBuffer from './create-tone-buffer';
+import renderToneBuffer from './render-tone-buffer';
 
-const createPrerenderableSampledBuffer = async ({
+const createPrerenderableSampledToneBuffer = async ({
   note,
   samplesByNote,
   getDestination,
@@ -16,9 +16,9 @@ const createPrerenderableSampledBuffer = async ({
     pitchShift,
     sampledNotes: Object.keys(samplesByNote),
   });
-  const noteBuffer = await createBuffer(samplesByNote[sampledNote]);
+  const noteBuffer = await createToneBuffer(samplesByNote[sampledNote]);
   noteBuffer.reverse = reverse;
-  const renderedBuffer = await renderBuffer({
+  const renderedBuffer = await renderToneBuffer({
     getDestination,
     buffer: noteBuffer,
     duration: noteBuffer.duration / playbackRate + additionalRenderLength,
@@ -30,4 +30,4 @@ const createPrerenderableSampledBuffer = async ({
   return renderedBuffer;
 };
 
-export default createPrerenderableSampledBuffer;
+export default createPrerenderableSampledToneBuffer;

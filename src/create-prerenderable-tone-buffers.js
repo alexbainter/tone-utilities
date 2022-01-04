@@ -2,7 +2,7 @@ import createPrerenderableToneBufferArray from './create-prerenderable-tone-buff
 import createToneBuffers from './create-tone-buffers';
 import renderToneBuffer from './render-tone-buffer';
 
-const createPrerenderableBuffers = async (options) => {
+const createPrerenderableToneBuffers = async (options) => {
   const {
     samples,
     sourceInstrumentName,
@@ -47,4 +47,4 @@ const createPrerenderableBuffers = async (options) => {
   return createToneBuffers(renderedBuffersByKey);
 };
 
-export default createPrerenderableBuffers;
+export default createPrerenderableToneBuffers;

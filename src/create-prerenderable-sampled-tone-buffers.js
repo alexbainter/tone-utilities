@@ -3,7 +3,7 @@ import createPrerenderableSampledToneBuffer from './create-prerenderable-sampled
 
 const inProgress = new Map();
 
-const createPrerenderableSampledBuffers = async ({
+const createPrerenderableSampledToneBuffers = async ({
   notes,
   samples,
   sampleLibrary,
@@ -52,4 +52,4 @@ const createPrerenderableSampledBuffers = async ({
   return createToneBuffers(renderedBuffersByNote);
 };
 
-export default createPrerenderableSampledBuffers;
+export default createPrerenderableSampledToneBuffers;
