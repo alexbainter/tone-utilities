@@ -1,5 +1,5 @@
 import * as Tone from 'tone';
-import createSampler from './create-sampler';
+import createSampler from './create-sampler.js';
 
 describe('createSampler', () => {
   it('should return a promise that resolves to an instance of Tone.Sampler', () => {
@@ -7,12 +7,12 @@ describe('createSampler', () => {
       './base/test-assets/noise-1s.ogg',
       Tone.context.createBuffer(1, 44100, 44100),
     ];
-    const results = urls.map(url => createSampler({ 100: url }));
-    results.forEach(result => {
+    const results = urls.map((url) => createSampler({ 100: url }));
+    results.forEach((result) => {
       expect(result).to.be.an.instanceOf(Promise);
     });
-    return Promise.all(results).then(resolvedResults => {
-      resolvedResults.forEach(result => {
+    return Promise.all(results).then((resolvedResults) => {
+      resolvedResults.forEach((result) => {
         expect(result).to.be.an.instanceOf(Tone.Sampler);
       });
     });
@@ -25,12 +25,12 @@ describe('createSampler', () => {
     const opts = {
       attack: 69,
     };
-    const results = urls.map(url => createSampler({ 100: url }, opts));
-    results.forEach(result => {
+    const results = urls.map((url) => createSampler({ 100: url }, opts));
+    results.forEach((result) => {
       expect(result).to.be.an.instanceOf(Promise);
     });
-    return Promise.all(results).then(resolvedResults => {
-      resolvedResults.forEach(result => {
+    return Promise.all(results).then((resolvedResults) => {
+      resolvedResults.forEach((result) => {
         expect(result).to.have.a.property('attack', opts.attack);
       });
     });

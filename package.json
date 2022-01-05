@@ -2,15 +2,32 @@
   "name": "@generative-music/tone-utilities",
   "version": "0.0.0",
   "description": "A collection of Tone.js utilities",
-  "main": "index.js",
-  "dependencies": {},
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@generative-music/theory": "^0.1.0"
+  },
   "devDependencies": {
     "@alexbainter/eslint-config": "^0.1.2",
-    "eslint": "^7.32.0",
-    "prettier": "^2.5.1"
+    "@babel/cli": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "@generative-music/browserslist-config-standardized-audio-context": "^25.0.1",
+    "chai": "^4.3.4",
+    "eslint": "^8.6.0",
+    "mocha": "^9.1.3",
+    "prettier": "^2.5.1",
+    "tone": "^14.7.77"
+  },
+  "peerDependencies": {
+    "tone": ">=14"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/**/*.spec.js"
   },
   "repository": {
     "type": "git",

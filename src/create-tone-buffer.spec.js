@@ -1,5 +1,5 @@
 import * as Tone from 'tone';
-import createToneBuffer from './create-tone-buffer';
+import createToneBuffer from './create-tone-buffer.js';
 
 describe('createToneBuffer', () => {
   it('should return a promise', () => {

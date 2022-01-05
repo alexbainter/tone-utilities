@@ -1,5 +1,5 @@
 import * as Tone from 'tone';
-import sampleNote from './sample-note';
+import { sampleNote } from '@generative-music/theory';
 import createToneBuffers from './create-tone-buffers';
 
 const createPitchShiftedSampler = async ({

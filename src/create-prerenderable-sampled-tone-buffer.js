@@ -1,4 +1,4 @@
-import sampleNote from './sample-note';
+import { sampleNote } from '@generative-music/theory';
 import createToneBuffer from './create-tone-buffer';
 import renderToneBuffer from './render-tone-buffer';
 
