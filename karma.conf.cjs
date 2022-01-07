@@ -20,7 +20,8 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      { pattern: 'src/**/*.spec.js', watched: false },
+      'test-setup.js',
+      { pattern: 'src/**/*.spec.js', watched: true },
       {
         pattern: 'test-assets/**/*',
         watched: false,
@@ -73,7 +74,7 @@ module.exports = function (config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
 
     // Concurrency level
     // how many browser instances should be started simultaneously

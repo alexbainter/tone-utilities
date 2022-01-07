@@ -35,7 +35,7 @@
   },
   "scripts": {
     "test": "karma start karma.conf.cjs",
-    "test:watch": "npm test -- --no-single-run"
+    "test:watch": "npm test -- --no-single-run --auto-watch"
   },
   "repository": {
     "type": "git",
